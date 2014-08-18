@@ -83,6 +83,7 @@ Unlike the main file the path file can contain hundreds, or more, lines per reco
 ```
 
 **Output:**
+
 2014-08-18-17-19-34_maindata.txt contents:
 
 ```
