@@ -1,3 +1,11 @@
+## License
+
+This project is derived from a great work by `Cyrille Medard de Chardon` and `Geoffrey Caruso`.
+
+Their project is at: http://geow.uni.lu/apps/fbr/index.html and is licensed under the MIT license.
+
+This derived project is also licensed under the MIT license. See Licence.txt
+
 ## Introduction
 The Friendly Batch Routing (FBR) application uses the Google Maps API to easily and simply gather route data for many origin-destination pairs. FBR is designed with usability in mind so that errors do not interrupt processing and skipped records can easily be resubmitted for processing. Additionally the FBR output can easily be imported into GIS packages.
 
@@ -38,26 +46,26 @@ The formats of the origin and destination can be either a latitude and longitude
 4;49,7;52.5,13.5
 ```
 
-###Options
-####Explicitly indicate input type (lat/long versus address string)
+### Options
+#### Explicitly indicate input type (lat/long versus address string)
 Unlike the examples above it is suggested that all the input origin-destinations be in the same format (id;lat,long;lat,long or id;string;string etc...). Further, it is strongly recommended that you explicitly indicate in what format (lat/long or string) you are submitting the records. It has been noted that a lat/long submitted as a string can return slightly different results than when submitted as a lat/long numercial value. While FBR tries to determine your input format automatically if it believes you have made an error, its guess is not always correct.
 
-####Record path coordinates
+#### Record path coordinates
 You may record the path lines but beware how you use or store them that it does not conflict with Google Maps API terms of service.
 
-####Avoid highways/tollways/ferries
+#### Avoid highways/tollways/ferries
 Allows you to avoid highways, tollways, or ferries.
 
-####Travel types
+#### Travel types
 You can select the type of travel you would like the distance/directions for. Available options are DRIVING, TRANSIT, BICYCLING and WALKING. Note that cycling and transit directions are not widespread outside of North America. Using these travel types may return many or total retrieval errors due to no results being returned by Google Maps.
 
-####Unit system used
-You can choose to use km or mile as output unit
-####Output formatting
+#### Output formatting
 Before running FBR you may choose a character to separate your output records. Select a comma if you wish to create CSV data.
-Pause time
+
+#### Pause time
 This is the interval between direction requests to the Google Maps API. If you are requesting more than 2,500 requests you should wait 34 seconds per request so that you do not go over the maximum daily limit. Entering a pause value of 34000 milliseconds would allow you to submit 5,000 records over two days. Additionally having too short a pause duration can increase your chance of rejection from the Google Maps API server. There is a built-in delay of 600 milliseconds minumum. Combined with the default 400 millisecond option this creates a 1 second delay between request.
-Stop/Pause processing
+
+#### Stop/Pause processing
 Once processing has commenced you may stop processing. Those records already processed in the input window will be removed leaving the remaining records. Pressing start again will create a new file.
 
 
@@ -87,6 +95,3 @@ Once processing has commenced you may stop processing. Those records already pro
 1	284	41.869220000000006	-87.66939
 1	285	41.86919	-87.67165000000001
 ```
-
- [^1]: 
- [^1]: 
