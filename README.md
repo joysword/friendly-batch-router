@@ -13,8 +13,8 @@ A simple origin-destination address or lat/long pair input will return:
 
 * the lat/long of the origin,
 * the lat/long of the destination,
-* travel time in seconds,
-* travel distance in meters, and
+* travel time in `seconds`,
+* travel distance in `meters`, and
 * Google Maps direction steps (a complexity proxy)
 
 and optionally in an other file:
@@ -54,13 +54,15 @@ Unlike the examples above it is suggested that all the input origin-destinations
 You may record the path lines but beware how you use or store them that it does not conflict with Google Maps API terms of service.
 
 #### Avoid highways/tollways/ferries
-Allows you to avoid highways, tollways, or ferries.
+Allows you to avoid `highways`, `tollways`, and/or `ferries`.
 
 #### Travel types
-You can select the type of travel you would like the distance/directions for. Available options are DRIVING, TRANSIT, BICYCLING and WALKING. Note that cycling and transit directions are not widespread outside of North America. Using these travel types may return many or total retrieval errors due to no results being returned by Google Maps.
+You can select the type of travel you would like the distance/directions for. Available options are `DRIVING`, `TRANSIT`, `BICYCLING` and `WALKING`. Note that cycling and transit directions are not widespread outside of North America. Using these travel types may return many or total retrieval errors due to no results being returned by Google Maps.
 
 #### Output formatting
-Before running FBR you may choose a character to separate your output records. Select a comma if you wish to create CSV data.
+Before running FBR you may choose a character to separate your output records. The default is `tab`. Select `comma` if you wish to create CSV data.
+
+You can also choose to let the output file more readable by choosing `human-friendly` instead of using the default option `GIS-friendly`.
 
 #### Pause time
 This is the interval between direction requests to the Google Maps API. If you are requesting more than 2,500 requests you should wait 34 seconds per request so that you do not go over the maximum daily limit. Entering a pause value of 34000 milliseconds would allow you to submit 5,000 records over two days. Additionally having too short a pause duration can increase your chance of rejection from the Google Maps API server. There is a built-in delay of 600 milliseconds minumum. Combined with the default 400 millisecond option this creates a 1 second delay between request.
