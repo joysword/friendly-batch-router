@@ -17,7 +17,7 @@ A simple origin-destination address or lat/long pair input will return:
 * travel distance in `meters`, and
 * Google Maps direction steps (a complexity proxy)
 
-and optionally in an other file:
+and optionally in another file:
 
 * the geometric path as a function of lat/long points
 
