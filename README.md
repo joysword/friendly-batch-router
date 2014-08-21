@@ -60,7 +60,7 @@ Allows you to avoid `highways`, `tollways`, and/or `ferries`.
 You can select the type of travel you would like the distance/directions for. Available options are `DRIVING`, `TRANSIT`, `BICYCLING` and `WALKING`. Note that cycling and transit directions are not widespread outside of North America. Using these travel types may return many or total retrieval errors due to no results being returned by Google Maps.
 
 #### Pause time
-This is the interval between direction requests to the Google Maps API. If you are requesting more than 2,500 requests you should wait 34 seconds per request so that you do not go over the maximum daily limit. Entering a pause value of 34000 milliseconds would allow you to submit 5,000 records over two days. Additionally having too short a pause duration can increase your chance of rejection from the Google Maps API server. There is a built-in delay of 600 milliseconds minumum. Combined with the default 400 millisecond option this creates a 1 second delay between request.
+This is the interval between direction requests to the Google Maps API. If you are requesting more than 2,500 requests you should wait 34 seconds per request so that you do not go over the maximum daily limit. Entering a pause value of 34000 milliseconds would allow you to submit 5,000 records over two days. Additionally having too short a pause duration can increase your chance of rejection from the Google Maps API server. There is a built-in delay of 600 milliseconds minimum. Combined with the default 400 millisecond option this creates a 1 second delay between requests.
 
 #### Output formatting
 Before running FBR you may choose a character to separate your output records. The default is `tab`. Select `comma` if you wish to create CSV data.
