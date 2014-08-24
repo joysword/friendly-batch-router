@@ -7,14 +7,7 @@ Their project is at: http://geow.uni.lu/apps/fbr/index.html and is licensed unde
 This derived project is also licensed under the MIT license. See Licence.txt
 
 ## Introduction
-The Friendly Batch Routing (FBR) application
-uses the Google Maps API to easily and simply
-gather route data for many origin-destination
-pairs. FBR is designed with usability in mind
-so that errors do not interrupt processing and
-skipped records can easily be resubmitted for
-processing. Additionally the FBR output can
-easily be imported into GIS packages.
+The Friendly Batch Routing (FBR) application uses the Google Maps API to easily and simply gather route data for many origin-destination pairs. FBR is designed with usability in mind so that errors do not interrupt processing and skipped records can easily be resubmitted for processing. Additionally the FBR output can easily be imported into GIS packages.
 
 A simple origin-destination address or lat/long pair input will return:
 
